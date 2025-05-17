@@ -2,13 +2,18 @@ import difflib
 import re
 import os
 from openai import OpenAI
-from prompt_maps import prompt_map 
 from dotenv import load_dotenv
+import json
+
 
 load_dotenv()
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
-prompt_map = prompt_map()
+json_file_path = 'prompt_map.json'
+
+
+with open(json_file_path, 'r', encoding='utf-8') as f:
+    prompt_map = json.load(f)
 
 
 def profession_to_prompt_from_map(profession: str) -> str | None:

@@ -1,10 +1,10 @@
-fastapi
-uvicorn[standard]
-python-multipart
-openai
+fastapi==0.111.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+openai==1.35.13
 replicate
 pydantic
-python-dotenv
+python-dotenv==1.0.1
 requests
 aiofiles
 aiohttp
